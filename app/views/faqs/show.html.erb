@@ -1,3 +1,4 @@
+<h1>FAQ</h1>
 <p>
 	<strong>Question:<strong>
   	<%= @faq.question %>
@@ -7,6 +8,36 @@
   	<strong>Answer:</strong>
   	<%= @faq.answer %>
 </p>
+
+<h2>Comments</h2>
+<% @faq.comments.each do |comment| %>
+	<p>
+    	<strong>Commenter:</strong>
+    	<%= comment.commenter %>
+  	</p>
+  	<p>
+    	<strong>Comment:</strong>
+    	<%= comment.body %>
+  	</p>
+  	<p>
+  		<%= comment.created_at.strftime("%b %d, %Y at %I:%M %p") %> 
+  	</p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@faq, @faq.comments.build]) do |f| %>
+	<p>
+    	<%= f.label :commenter %><br>
+    	<%= f.text_field :commenter %>
+  	</p>
+  	<p>
+    	<%= f.label :body %><br>
+    	<%= f.text_area :body %>
+  	</p>
+  	<p>
+    	<%= f.submit %>
+  	</p>
+<% end %>
 
 <%= link_to 'Edit', edit_faq_path(@faq) %> |
 <%= link_to 'Back', faqs_path %>

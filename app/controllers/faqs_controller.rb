@@ -17,7 +17,7 @@ class FaqsController < ApplicationController
 	end
 
 	def create
-		@faq = Faq.new(params.require(:faq).permit(:question, :answer))
+		@faq = Faq.new(faq_params)
 		
 		if @faq.save
 			redirect_to @faq
