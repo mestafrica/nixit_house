@@ -1,2 +1,61 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<!-- Header -->
+<header>
+	<div class="container">
+		<h3 id="desc-text">MENU</h3>
+	</div>
+</header>
+
+<!-- Tabs -->
+<section id="schedule">
+	<div class="menu-tab">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#tab_default_1" data-toggle="tab">BREAKFAST</a></li>
+			<li><a href="#tab_default_2" data-toggle="tab">LUNCH</a></li>
+			<li><a href="#tab_default_3" data-toggle="tab">DINNER</a></li>
+		</ul>
+		<div class="container tab-content">
+			<div class="tab-pane active" id="tab_default_1">
+				<h5 id="select">Select your favourite breakfast options</h5>
+				<div class="row">
+					<h5 id="category">Beverages</h5>
+					<div class="col-md-4">
+						<a href="#">
+							<div class="row meal">
+								<div class="col-md-4">
+									<%= image_tag("beverage-coffee.jpg", :class => "img-circle img-responsive") %>
+								</div>
+								<div class="col-md-8">Coffee</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="#">
+							<div class="row meal">
+								<div class="col-md-4">
+									<%= image_tag("beverage-milo.jpg", :class => "img-circle img-responsive") %>
+								</div>
+								<div class="col-md-8">Milo</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="#">
+							<div class="row meal">
+								<div class="col-md-4">
+									<%= image_tag("beverage-lipton.png", :class => "img-circle img-responsive") %>
+								</div>
+								<div class="col-md-8">Lipton Tea</div>
+							</div>
+						</a>
+					</div>
+				</div><!-- Outer Row -->
+			</div>
+			<div class="tab-pane" id="tab_default_2">
+				<h5 id="select">Select your lunch for each day</h5>
+			</div>
+			<div class="tab-pane" id="tab_default_3">
+				<h5 id="select">What would you like for dinner?</h5>
+			</div>
+		</div>
+	</div>
+</section>
