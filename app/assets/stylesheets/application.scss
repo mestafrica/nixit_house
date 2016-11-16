@@ -1,0 +1,218 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+/*"bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*--------------------General-------------------*/
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  color: #2C3E50;
+  background-color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+a, a:hover, a:focus, a:active, a.active {
+  color: #00CA9B;
+  outline: none;
+}
+
+/*--------------------Navigation-------------------*/
+#top-nav {
+  background: #2C3E50;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px 0px;
+  border-bottom: 2px solid #00CA9B;
+}
+.navbar {
+	transition: all .5s ease-out;
+}
+.navbar-brand img {
+  height: 100%;
+  width: auto;
+}
+.navbar-header a {
+	padding: 10px 0px;
+}
+.navbar-default .navbar-nav {
+  letter-spacing: 1px;
+}
+.navbar-default .navbar-nav li a {
+  color: white;
+}
+.navbar-default .navbar-nav li a:focus,
+.navbar-default .navbar-nav li a:active,
+.navbar-default .navbar-nav li a.active,
+.navbar-default .navbar-nav li a:hover {
+  color: #00CA9B;
+  outline: none;
+  background: #2C3E50;
+}
+.navbar-default .navbar-nav .active a,
+.navbar-default .navbar-nav .active a:hover,
+.navbar-default .navbar-nav .active a:focus,
+.navbar-default .navbar-nav .active a:active {
+  color: #00CA9B;
+  background: #2C3E50;
+}
+.navbar-default .navbar-toggle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-color: white;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #00CA9B;
+  color: white;
+  border-color: #00CA9B;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/*---------------------User Dropdown--------------------*/
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+
+/*---------------------Tabbed Header--------------------*/
+header {
+	background-image: url(donut.jpg);
+ 	background-repeat: no-repeat;
+ 	background-attachment: scroll;
+ 	background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: white;
+    height: 400px;
+    padding-top: 165px;
+    padding-bottom: 165px;
+}
+h3#desc-text {
+	padding: 25px 40px;
+	display: inline-block;
+	background-color: #2C3E50;
+	color: white;
+}
+.menu-tab .nav {
+	text-align: center;
+	align-items: center;
+	background-color: #2C3E50;
+	margin: 0px;
+	border-bottom: 1px solid #2C3E50;
+}
+.menu-tab .nav>li>a:focus, .nav>li>a:hover {
+    color: #00CA9B;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 3px solid #2C3E50;
+}
+.nav-tabs {
+    border: 0px;
+}
+.nav-tabs li {
+	display: inline-block;
+	float: none;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #00CA9B;
+    cursor: default;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 3px solid #00CA9B;
+}
+.nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	color: #00CA9B;
+    background-color: transparent;
+}
+.nav-tabs>li>a {
+	padding: 25px 40px;
+	letter-spacing: 2px;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+}
+.tab-content h5 {
+	display: block;
+	text-align: center;
+}
+h5#select {
+	display: block;
+	text-align: center;
+	padding: 15px 0px;
+}
+h5#category {
+	background-color: #00CA9B;
+	color: white;
+	padding: 15px 0px;
+  margin: 0px 0px 30px;
+}
+#schedule {
+	
+}
+.meal {
+	background-color: white;
+	padding: 25px;
+	margin: 0 auto;
+}
+#bottom-nav {
+  background: #2C3E50;
+  text-align: center;
+  border-radius: 0px;
+  border-bottom: 0px;
+  margin: 30px 0px 0px;
+  padding: 20px 0px;
+}
+
+#bottom-nav p {
+  color: white;
+  margin-bottom: 0px;
+}
+
+/*-----------------Media Queries----------------------*/
+@media (max-width: 1200px) {
+	.meal {
+		width: 120px;
+    	height: 120px;
+	}
+}
+
